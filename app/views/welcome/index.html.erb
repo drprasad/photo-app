@@ -1,2 +1,47 @@
-<h1>Welcome to Photo App</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<div class="container jumbotron">
+	<h3>Welcome to the Photo Management App</h3>
+	<h4>You'll love managing your Photos with our application. Sign up!</h4>
+</div>
+<div class="container container-table">
+	<table class="table">
+		<thead>
+			<tr>
+				<th></th>
+				<th>Premium Plan</th>
+				<th>Amaze Plan</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Image Uploads</td>
+				<td>Unlimited</td>
+				<td>Unlimited</td>
+			</tr>
+			<tr>
+				<td>Responsive Design</td>
+				<td>Yes</td>
+				<td>Yes</td>
+			</tr>
+			<tr>
+				<td>Access Anywhere</td>
+				<td>Yes</td>
+				<td>Yes</td>
+			</tr>
+			<tr>
+				<td>Projects</td>
+				<td>One</td>
+				<td>Unlimited</td>
+			</tr>
+			<tr>
+				<td>Price</td>
+				<td>&dollar; 10</td>
+				<td>&dollar; 20</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><%= link_to 'Sign up', new_user_registration_path, class: "btn btn-primary" %></td>
+				<td><%= link_to 'Sign up', new_user_registration_path, class: "btn btn-primary" %></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
