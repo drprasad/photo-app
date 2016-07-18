@@ -47,11 +47,12 @@
         </button>
         <a class="navbar-brand" href="#">PhotoApp</a>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
-          <ul class="nav navbar-nav">
-            <li><%= link_to "Link1", "/path1"  %></li>
-            <li><%= link_to "Link2", "/path2"  %></li>
-            <li><%= link_to "Link3", "/path3"  %></li>
-          </ul>
+          <% if current_user %>
+            <ul class="nav navbar-nav">
+              <li><%= link_to "Images", images_path  %></li>
+              <li><%= link_to "Upload Image", new_image_path  %></li>
+            </ul>
+          <% end %>
           <ul class="nav navbar-nav navbar-right">
             <% if current_user %>
               <li class="user-name">
@@ -61,7 +62,7 @@
               <li class="logout"><%= link_to('Logout', destroy_user_session_path, class: "btn btn-xs btn-danger", title: "Logout", method: :delete) %>
               </li>
             <% else %>
-              <li class="col-md-4 pull-right">
+              <li class="pull-right">
                 <%= link_to('Sign In', new_user_session_path, class: "btn btn-primary btn-success", title: "Sign In") %>
               </li>
             <% end %>
@@ -72,7 +73,7 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-lg-9">
+        <div class="col-lg-12">
           <%= bootstrap_flash %>
           <%= yield %>
         </div>
