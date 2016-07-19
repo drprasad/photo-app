@@ -63,7 +63,7 @@
               </li>
             <% else %>
               <li class="pull-right">
-                <%= link_to('Sign In', new_user_session_path, class: "btn btn-primary btn-success", title: "Sign In") %>
+                <%= link_to('Sign In', new_user_session_path, class: "btn btn-primary btn-success signin", title: "Sign In") %>
               </li>
             <% end %>
           </ul>
@@ -78,7 +78,7 @@
           <%= yield %>
         </div>
       </div><!--/row-->
-      <div class="container">
+      <div class="container footer">
         <footer>
           <p>&copy; Company 2016</p>
         </footer>

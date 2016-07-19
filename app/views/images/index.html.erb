@@ -1,5 +1,5 @@
 <%- model_class = Image -%>
-<div class="well well-lg">
+<div class="well well-lg container-images">
   <div class="page-header">
     <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
   </div>
@@ -19,6 +19,7 @@
           <td><%= image_tag image.picture.url, size: "100x100" %></td>
           <td><%=l image.created_at %></td>
           <td>
+            <%= link_to "Download", image.picture.url, class: "btn btn-xs btn-success" %>
             <%= link_to t('.edit', :default => t("helpers.links.edit")),
                         edit_image_path(image), :class => 'btn btn-default btn-xs' %>
             <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
